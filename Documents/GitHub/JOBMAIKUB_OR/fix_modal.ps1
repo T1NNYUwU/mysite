@@ -1,0 +1,1 @@
+ = Get-ChildItem -Path frontend\src\components\admin -Recurse -Filter *.tsx; foreach ( in ) {  = Get-Content .FullName -Raw;  = [regex]::Replace(, '<(Sheet|Dialog|DropdownMenu|Select|AlertDialog)\b(?![^>]*modal=\{false\})([^>]*)>', '< modal={false}>'); if ( -cne ) { Set-Content -Path .FullName -Value  -NoNewline; Write-Host Updated  } }
